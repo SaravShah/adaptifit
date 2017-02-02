@@ -7,7 +7,7 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 
-BodyPart.create(name: "Lower Body")
-BodyPart.create(name: "Upper Body")
-BodyPart.create(name: "Cardio")
-BodyPart.create(name: "Core Strength/ Stability")
+WorkoutType.create(name: "Lower Body")
+WorkoutType.create(name: "Upper Body")
+WorkoutType.create(name: "Cardio")
+WorkoutType.create(name: "Core Strength/ Stability")
