@@ -1,5 +1,5 @@
 class MuscleGroup < ApplicationRecord
-	belongs_to :body_part
+	belongs_to :workout_type
 	has_many :workouts
 
 end
