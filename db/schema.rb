@@ -10,7 +10,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170202084436) do
+ActiveRecord::Schema.define(version: 20170203060510) do
+
+  create_table "equipment", force: :cascade do |t|
+    t.string   "name"
+    t.string   "image"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "muscle_groups", force: :cascade do |t|
     t.string   "name"
@@ -32,8 +39,10 @@ ActiveRecord::Schema.define(version: 20170202084436) do
     t.text     "description"
     t.string   "gif"
     t.integer  "muscle_group_id"
+    t.integer  "equipment_id"
     t.datetime "created_at",      null: false
     t.datetime "updated_at",      null: false
+    t.index ["equipment_id"], name: "index_workouts_on_equipment_id"
     t.index ["muscle_group_id"], name: "index_workouts_on_muscle_group_id"
   end
 

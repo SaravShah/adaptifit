@@ -5,6 +5,7 @@ class CreateWorkouts < ActiveRecord::Migration[5.0]
     	t.text :description
     	t.string :gif
     	t.references :muscle_group
+    	t.references :equipment
 
     	t.timestamps
     end
