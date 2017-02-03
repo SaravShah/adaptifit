@@ -10,21 +10,21 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170202061219) do
-
-  create_table "body_parts", force: :cascade do |t|
-    t.string   "name"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
+ActiveRecord::Schema.define(version: 20170202084436) do
 
   create_table "muscle_groups", force: :cascade do |t|
     t.string   "name"
     t.text     "description"
-    t.integer  "body_part_id"
-    t.datetime "created_at",   null: false
-    t.datetime "updated_at",   null: false
-    t.index ["body_part_id"], name: "index_muscle_groups_on_body_part_id"
+    t.integer  "workout_type_id"
+    t.datetime "created_at",      null: false
+    t.datetime "updated_at",      null: false
+    t.index ["workout_type_id"], name: "index_muscle_groups_on_workout_type_id"
+  end
+
+  create_table "workout_types", force: :cascade do |t|
+    t.string   "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "workouts", force: :cascade do |t|

@@ -3,7 +3,7 @@ class CreateMuscleGroups < ActiveRecord::Migration[5.0]
     create_table :muscle_groups do |t|
     	t.string :name
     	t.text :description
-    	t.references :body_part
+    	t.references :workout_type
 
     	t.timestamps
     end
