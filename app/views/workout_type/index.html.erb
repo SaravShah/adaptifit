@@ -1,3 +1,8 @@
 <h1> Home Page </h1>
 
-<%= @workout_types.first.name %>
+<ul>
+  <% @workout_types.each do |workout_type| %>
+    <li> <%= workout_type.name %> </li>
+  <% end %>
+</ul>
+
