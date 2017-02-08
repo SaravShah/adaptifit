@@ -10,7 +10,28 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170202084436) do
+ActiveRecord::Schema.define(version: 20170208015900) do
+
+  create_table "equipment", force: :cascade do |t|
+    t.string   "name"
+    t.string   "image"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "equipment_workouts", force: :cascade do |t|
+    t.integer "workout_id"
+    t.integer "equipment_id"
+    t.index ["equipment_id"], name: "index_equipment_workouts_on_equipment_id"
+    t.index ["workout_id"], name: "index_equipment_workouts_on_workout_id"
+  end
+
+  create_table "muscle_group_workouts", force: :cascade do |t|
+    t.integer "workout_id"
+    t.integer "muscle_group_id"
+    t.index ["muscle_group_id"], name: "index_muscle_group_workouts_on_muscle_group_id"
+    t.index ["workout_id"], name: "index_muscle_group_workouts_on_workout_id"
+  end
 
   create_table "muscle_groups", force: :cascade do |t|
     t.string   "name"
@@ -31,10 +52,8 @@ ActiveRecord::Schema.define(version: 20170202084436) do
     t.string   "name"
     t.text     "description"
     t.string   "gif"
-    t.integer  "muscle_group_id"
-    t.datetime "created_at",      null: false
-    t.datetime "updated_at",      null: false
-    t.index ["muscle_group_id"], name: "index_workouts_on_muscle_group_id"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
   end
 
 end
