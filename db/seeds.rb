@@ -55,7 +55,7 @@ abs = MuscleGroup.create(name: "Abs", description: "Rectus Abdominus covers the 
 obliques = MuscleGroup.create(name: "Obliques", description:"The oblique muscles are located on the side of the waist. They allow for the twisting and tilting of the torso.")
 intercostals = MuscleGroup.create(name: "Intercostals", description:"Intercostal muscles are located between the side of the rib cage. Comes into play when you flex the torso and twist from side to side.")
 serratus = MuscleGroup.create(name: "Serratus", description:"The serratus is located between front abs and lats. Allows for the pulling of the scapula forward and round like the motion of throwing a punch.")
-	
+
 core.muscle_groups << abs << obliques << intercostals << serratus
 
 
@@ -66,36 +66,43 @@ squat_rack =  Equipment.create(name: "Squat Rack" , image: "www.google.com")
 barbells = Equipment.create(name: "Barbells" , image: "www.google.com")
 flat_bench = Equipment.create(name: "Flat Bench" , image: "www.google.com")
 seated_bench = Equipment.create(name:"Seated Bench", image: "www.hooli.com")
+
+
+#----- THESE WORK DO THESE --------------------------
 incline_bench = Equipment.create(name: "Incline Bench" , image: "www.google.com")
 decline_bench = Equipment.create(name: "Decline Bench", image: "www.google.com")
 cables_and_pulleys = Equipment.create(name: "Cables and Pulleys" , image: "www.google.com")
 dumb_bells = Equipment.create(name: "Dumb Bells" , image: "www.google.com")
 pull_up_bar = Equipment.create(name: "Pull Up Bar" , image: "www.google.com")
+hyper_extension_bench = Equipment.create(name: "Hyper Extension Bench" , image: "www.google.com")
+dipping_bars = Equipment.create(name: "Dipping Bars" , image: "www.google.com")
+preacher_bench = Equipment.create(name: "Preacher Bench" , image: "www.google.com")
+kettle_bells = Equipment.create(name: "Kettle Bells" , image: "www.google.com")
+stability_ball = Equipment.create(name: "Stability Ball" , image: "www.google.com")
+foam_mat = Equipment.create(name: "Mat", image: "www.google.com")
+#------------------------------------------------------
+
+
+
+# FUTURE ---------
+# leg_press_machine = Equipment.create(name: "Leg Press Machine" , image: "www.google.com")
+# smith_machine = Equipment.create(name: "Smith Machine" , image: "www.google.com")
 # lat_pull_down_machine = Equipment.create(name: "Lat Pull Down Machine" , image: "www.google.com")
 # leg_extension_machine = Equipment.create(name: "Leg Extension Machine" , image: "www.google.com")
 # leg_curl_machine = Equipment.create(name: "Leg Curl Machine" , image: "www.google.com")
-hyper_extension_bench = Equipment.create(name: "Hyper Extension Bench" , image: "www.google.com")
-dipping_bars = Equipment.create(name: "Dipping Bars" , image: "www.google.com")
-# smith_machine = Equipment.create(name: "Smith Machine" , image: "www.google.com")
 # rowing_machine = Equipment.create(name: "Rowing Machine" , image: "www.google.com")
-preacher_bench = Equipment.create(name: "Preacher Bench" , image: "www.google.com")
-
-# leg_press_machine = Equipment.create(name: "Leg Press Machine" , image: "www.google.com")
 # hack_squat_machine = Equipment.create(name: "Hack Squat Machine" , image: "www.google.com")
 # calf_raise_machine = Equipment.create(name: "Calf Raise Machine" , image: "www.google.com")
 # leg_adduction_abduction_machine = Equipment.create(name: "Leg Adduction/ Abduction Machine" , image: "www.google.com")
 # pec_deck_machine = Equipment.create(name: "Pec Deck Machine" , image: "www.google.com")
-kettle_bells = Equipment.create(name: "Kettle Bells" , image: "www.google.com")
-stability_ball = Equipment.create(name: "Stability Ball" , image: "www.google.com")
 # exercise_bikes = Equipment.create(name: "Exercise Bikes" , image: "www.google.com")
 # ez_curl_bar = Equipment.create(name: "EZ Curl Bar" , image: "www.google.com")
 # wall_ball = Equipment.create(name: "Wall Ball" , image: "www.google.com")
-foam_mat = Equipment.create(name: "Mat", image: "www.google.com")
 
 # Workouts ------------------------------------
 
 back_squat = Workout.create(name: "back squat", description:"nil", gif: "nil")
-deadlift = Workout.create(name: "deadlift", description:"nil", gif: "nil") 
+deadlift = Workout.create(name: "deadlift", description:"nil", gif: "nil")
 front_squat = Workout.create(name: "front squat", description:"nil", gif: "nil")
 over_head_press = Workout.create(name: "over head press", description:"nil", gif: "nil")
 good_morning = Workout.create(name: "good morning", description:"nil", gif: "nil")
@@ -113,27 +120,27 @@ crunches = Workout.create(name:"crunches", description:'nil', gif:'nil')
 
 push_ups = Workout.create(name:"Push-Ups",description:'nil', gif:'nil')
 flys = Workout.create(name:"Flys", description:'nil', gif:'nil')
-single_arm_row = Workout.create(name:"Single Arm Row", description:'nil', gif:'nil') 
-step_ups = Workout.create(name:"Step-Ups", description:'nil', gif:'nil') 
-box_jumps = Workout.create(name:"Box Jumps ", description:'nil', gif:'nil') 
-single_leg_lunges = Workout.create(name:"Single Leg Lunges", description:'nil', gif:'nil') 
-dips = Workout.create(name:"Dips", description:'nil', gif:'nil') 
-chest_press = Workout.create(name:"Chest Press", description:'nil', gif:'nil') 
+single_arm_row = Workout.create(name:"Single Arm Row", description:'nil', gif:'nil')
+step_ups = Workout.create(name:"Step-Ups", description:'nil', gif:'nil')
+box_jumps = Workout.create(name:"Box Jumps ", description:'nil', gif:'nil')
+single_leg_lunges = Workout.create(name:"Single Leg Lunges", description:'nil', gif:'nil')
+dips = Workout.create(name:"Dips", description:'nil', gif:'nil')
+chest_press = Workout.create(name:"Chest Press", description:'nil', gif:'nil')
 
 side_raise = Workout.create(name:"side raise", description:"nil", gif:"nil")
 tricep_extension = Workout.create(name:"tricep extension", description:"nil", gif:"nil")
 
-tricep_pull_down = Workout.create(name:"tricep pull down", description:"nil", gif:"nil") 
-cable_kick_back = Workout.create(name:"cable kick back", description:"nil", gif:"nil") 
-cable_crunch = Workout.create(name:"cable crunch", description:"nil", gif:"nil") 
-reverse_fly = Workout.create(name:"reverse fly", description:"nil", gif:"nil") 
+tricep_pull_down = Workout.create(name:"tricep pull down", description:"nil", gif:"nil")
+cable_kick_back = Workout.create(name:"cable kick back", description:"nil", gif:"nil")
+cable_crunch = Workout.create(name:"cable crunch", description:"nil", gif:"nil")
+reverse_fly = Workout.create(name:"reverse fly", description:"nil", gif:"nil")
 
-wide_grip_pull_ups = Workout.create(name:"wide grip pull up", description:"nil",gif:"nil") 
-narrow_grip_pull_ups = Workout.create(name:"narrow grip pull up", description:"nil",gif:"nil")  
-leg_raises = Workout.create(name:"leg raises", description:"nil",gif:"nil") 
-knee_raises = Workout.create(name:"knee raises", description:"nil",gif:"nil") 
-scissor_kicks = Workout.create(name:"scissor kicks", description:"nil",gif:"nil") 
-oblique_raises  = Workout.create(name:"oblique raises ", description:"nil",gif:"nil") 
+wide_grip_pull_ups = Workout.create(name:"wide grip pull up", description:"nil",gif:"nil")
+narrow_grip_pull_ups = Workout.create(name:"narrow grip pull up", description:"nil",gif:"nil")
+leg_raises = Workout.create(name:"leg raises", description:"nil",gif:"nil")
+knee_raises = Workout.create(name:"knee raises", description:"nil",gif:"nil")
+scissor_kicks = Workout.create(name:"scissor kicks", description:"nil",gif:"nil")
+oblique_raises  = Workout.create(name:"oblique raises ", description:"nil",gif:"nil")
 
 back_extensions = Workout.create(name: "back extension", description: "nil", gif:'nil')
 
@@ -142,16 +149,16 @@ swing = Workout.create(name: "swing", description: "nil", gif:"nil")
 hamstring_curl = Workout.create(name: "hamstring curl", description: "nil", gif:"nil")
 knee_tucks = Workout.create(name: "knee tucks", description: "nil", gif:"nil")
 
-plank = Workout.create(name: "plank", description: "nil", gif:"nil") 
+plank = Workout.create(name: "plank", description: "nil", gif:"nil")
 
-lateral_raise = Workout.create(name: "lateral raise", description: "nil", gif:"nil")  
+lateral_raise = Workout.create(name: "lateral raise", description: "nil", gif:"nil")
 # ----------------------------------
 #What Workout to Do with Equipment
 squat_rack.workouts << back_squat << deadlift << front_squat << over_head_press << good_morning << row << lunges << curl << shrug << calf_raise
 
-barbells.workouts << squat << deadlift << over_head_press << row << curl << lunges << shrug << calf_raise << glute_bridge << front_raise << skullcrusher << good_morning << crunches << chest_press 
+barbells.workouts << squat << deadlift << over_head_press << row << curl << lunges << shrug << calf_raise << glute_bridge << front_raise << skullcrusher << good_morning << crunches << chest_press
 
-flat_bench.workouts << glute_bridge << skullcrusher << push_ups << flys << single_arm_row << step_ups << box_jumps << single_leg_lunges << dips << chest_press  
+flat_bench.workouts << glute_bridge << skullcrusher << push_ups << flys << single_arm_row << step_ups << box_jumps << single_leg_lunges << dips << chest_press
 
 seated_bench.workouts << curl << over_head_press << front_raise << lateral_raise << tricep_extension
 
@@ -159,22 +166,22 @@ incline_bench.workouts << curl << chest_press
 
 decline_bench.workouts << chest_press << crunches
 
-cables_and_pulleys.workouts << tricep_extension << tricep_pull_down << curl << front_raise << lateral_raise << cable_kick_back << flys << cable_crunch << reverse_fly 
+cables_and_pulleys.workouts << tricep_extension << tricep_pull_down << curl << front_raise << lateral_raise << cable_kick_back << flys << cable_crunch << reverse_fly
 
-dumb_bells.workouts << tricep_extension << squat << curl << front_raise << lateral_raise << flys << chest_press << reverse_fly << lunges << over_head_press  << glute_bridge << calf_raise << shrug << single_arm_row 
-pull_up_bar.workouts << wide_grip_pull_ups << narrow_grip_pull_ups << leg_raises << knee_raises << scissor_kicks << oblique_raises 
+dumb_bells.workouts << tricep_extension << squat << curl << front_raise << lateral_raise << flys << chest_press << reverse_fly << lunges << over_head_press  << glute_bridge << calf_raise << shrug << single_arm_row
+pull_up_bar.workouts << wide_grip_pull_ups << narrow_grip_pull_ups << leg_raises << knee_raises << scissor_kicks << oblique_raises
 
-hyper_extension_bench.workouts << back_extensions 
+hyper_extension_bench.workouts << back_extensions
 
-dipping_bars.workouts << dips << leg_raises 
+dipping_bars.workouts << dips << leg_raises
 
-preacher_bench.workouts << curl 
+preacher_bench.workouts << curl
 
-kettle_bells.workouts << swing << squat << lunges 
+kettle_bells.workouts << swing << squat << lunges
 
-stability_ball.workouts << squat << hamstring_curl << push_ups << back_extensions << knee_tucks 
+stability_ball.workouts << squat << hamstring_curl << push_ups << back_extensions << knee_tucks
 
-foam_mat.workouts << leg_raises << glute_bridge << crunches << scissor_kicks << plank << push_ups << oblique_raises 
+foam_mat.workouts << leg_raises << glute_bridge << crunches << scissor_kicks << plank << push_ups << oblique_raises
 
 
 
@@ -186,11 +193,11 @@ hamstrings.workouts << back_squat
 glutes.workouts << back_squat
 middle_back.workouts << back_squat
 
-hamstrings.workouts << deadlift 
+hamstrings.workouts << deadlift
 glutes.workouts << deadlift
-lower_back.workouts << deadlift 
+lower_back.workouts << deadlift
 
-quads.workouts << front_squat 
+quads.workouts << front_squat
 
 deltoids.workouts << over_head_press
 triceps.workouts << over_head_press
@@ -205,10 +212,10 @@ middle_back.workouts << row
 
 hamstrings.workouts << lunges
 quads.workouts << lunges
-glutes.workouts << lunges 
+glutes.workouts << lunges
 
 biceps.workouts << curl
-forearms.workouts << curl 
+forearms.workouts << curl
 
 traps.workouts << shrug
 
@@ -225,7 +232,7 @@ deltoids.workouts << front_raise
 serratus.workouts << front_raise
 biceps.workouts << front_raise
 
-triceps.workouts <<   skullcrusher 
+triceps.workouts <<   skullcrusher
 
 abs.workouts << crunches
 
@@ -250,11 +257,11 @@ hamstrings.workouts <<  single_leg_lunges
 quads.workouts << single_leg_lunges
 glutes.workouts << single_leg_lunges
 
-chest.workouts << dips 
-triceps.workouts << dips 
+chest.workouts << dips
+triceps.workouts << dips
 deltoids.workouts  << dips
 
-triceps.workouts << chest_press 
+triceps.workouts << chest_press
 chest.workouts << chest_press
 
 deltoids.workouts << lateral_raise
@@ -265,13 +272,13 @@ lats.workouts << tricep_extension
 
 #-
 
-triceps.workouts << tricep_pull_down 
+triceps.workouts << tricep_pull_down
 
 glutes.workouts << cable_kick_back
 
 abs.workouts << cable_crunch
 
-middle_back.workouts << reverse_fly 
+middle_back.workouts << reverse_fly
 deltoids.workouts << reverse_fly
 
 #-
@@ -280,9 +287,9 @@ lats.workouts << wide_grip_pull_ups
 biceps.workouts << narrow_grip_pull_ups
 
 abs.workouts << leg_raises
-obliques.workouts << leg_raises 
+obliques.workouts << leg_raises
 
-abs.workouts << knee_raises 
+abs.workouts << knee_raises
 
 abs.workouts << scissor_kicks
 
@@ -293,13 +300,13 @@ abs.workouts << oblique_raises
 
 lower_back.workouts << back_extensions
 
-hamstrings.workouts << swing 
+hamstrings.workouts << swing
 glutes.workouts << swing
 chest.workouts << swing
 lats.workouts << swing
 abs.workouts << swing
-deltoids.workouts << swing 
-forearms.workouts << swing 
+deltoids.workouts << swing
+forearms.workouts << swing
 
 abs.workouts << knee_tucks
 
@@ -324,11 +331,11 @@ serratus.workouts << plank
 # dips = Workout.create(name: "Dips",description:"nil", gif: "nil", muscle_group_id: 2)
 # skullcrushers = Workout.create(name:"skullcrusher",description:"nil", gif: "nil", muscle_group_id: 2)
 
-# machine3.workouts << chest_press 
-# machine3.workouts << dips 
+# machine3.workouts << chest_press
+# machine3.workouts << dips
 # machine3.workouts << skullcrushers
 # machine1.workouts << curl << chest_press
-# machine2.workouts << curl 
+# machine2.workouts << curl
 # machine1.workouts.create(name:"Curls", description: "Lift shit",gif: "breh",muscle_group_id: 2)
 # machine2.workouts.create(name:"Curls", description: "Lift shit",gif: "breh", muscle_group_id: 2)
 
