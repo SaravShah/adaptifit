@@ -1,0 +1,7 @@
+<h2> <%= @muscle_group.name %> </h2>
+
+<ul>
+<% @muscle_group.workouts.each do |workout| %>
+  <li><%= workout.name %></li>
+<% end %>
+</ul>

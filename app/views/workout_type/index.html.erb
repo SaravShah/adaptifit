@@ -1,8 +1,12 @@
-<h1> Home Page </h1>
+<h1> What Muscle Group would you like to workout?</h1>
 
 <ul>
   <% @workout_types.each do |workout_type| %>
-    <li> <%= workout_type.name %> </li>
+    <h3> <%= workout_type.name %> </h3>
+        <% workout_type.muscle_groups.each do |muscle_group| %>
+          <li><%= link_to muscle_group.name, muscle_group_path(muscle_group) %></li>
+        <% end %>
+
   <% end %>
 </ul>
 
