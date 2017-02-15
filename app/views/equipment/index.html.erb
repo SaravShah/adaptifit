@@ -1,3 +1,11 @@
+<header>
+	<% if current_user %>
+		<%= link_to "logout", logout_path, method: :delete %>
+	<% else %>
+		<span><%= link_to "login", login_path%> | <%= link_to "register", new_user_path %></span>
+	<% end %>
+</header>
+
 <h1> ADAPTIFIT </h1>
 
 
