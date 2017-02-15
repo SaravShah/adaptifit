@@ -1,12 +1,20 @@
-<h1> What Muscle Group would you like to workout?</h1>
+<h1> What Muscle Group(s) would you like to workout?</h1>
+
+
+<%= form_for :muscle_groups, :url => {:action => "create"} do |f| %>
 
 <ul>
   <% @workout_types.each do |workout_type| %>
     <h3> <%= workout_type.name %> </h3>
         <% workout_type.muscle_groups.each do |muscle_group| %>
-          <li><%= link_to muscle_group.name, muscle_group_path(muscle_group) %></li>
+         <li><%= check_box_tag "ms_id[]", muscle_group.id %>
+          <%= f.label muscle_group.name %></li>
+
         <% end %>
 
   <% end %>
+  <%= f.submit "Submit" %>
+  <% end %>
 </ul>
+
 

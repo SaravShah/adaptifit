@@ -3,5 +3,6 @@
 <ul>
 <% @muscle_group.workouts.each do |workout| %>
   <li><%= workout.name %></li>
+  <%= workout.description %>
 <% end %>
 </ul>
