@@ -1,2 +1,20 @@
-<h1> Here are the list of workouts to do with your specified equipment and muscle groups </h1>
+<h1> What Muscle Group(s) would you like to workout?</h1>
+
+
+<%= form_for :muscle_group, :url => {:controller => "muscle_group", :action => "create"} do |f| %>
+	<%= f.hidden_field :equipment_ids, :value => @equipment_ids %>
+<ul>
+  <% @workout_types.each do |workout_type| %>
+    <h3> <%= workout_type.name %> </h3>
+        <% workout_type.muscle_groups.each do |muscle_group| %>
+         <li><%= check_box_tag "ms_id[]", muscle_group.id %>
+          <%= f.label muscle_group.name %></li>
+
+        <% end %>
+
+  <% end %>
+  <%= f.submit "Submit" %>
+  <% end %>
+</ul>
+
 
