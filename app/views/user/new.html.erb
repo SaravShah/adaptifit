@@ -1,0 +1,7 @@
+<h2>Register</h2>
+
+<%= form_for @user, url: user_index_path(@user), html: {method: :post} do |f| %>
+	email: <%= f.text_field :email %><br>
+	password: <%= f.password_field :password_hash %><br>
+	<%= f.submit %>
+<% end %>
