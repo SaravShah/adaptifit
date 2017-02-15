@@ -3,8 +3,8 @@ class EquipmentController < ApplicationController
     @equipments = Equipment.all
   end
   def create
-    @sma = params[:eq_id]
-    redirect_to :action => 'show'
+    equipment_ids = params[:eq_id]
+    redirect_to controller: 'workout_type', action: 'index', ids:equipment_ids
   end
   # def show
   #   p "boo"*100

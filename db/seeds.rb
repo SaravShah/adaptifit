@@ -25,7 +25,7 @@ triceps = MuscleGroup.create(name: "triceps", description: "Tricep brachii muscl
 biceps = MuscleGroup.create(name: "biceps", description: "Bicep brachii muscle lies on the upper arm between the shoulder and elbow. Allows for supination and flexion")
 chest = MuscleGroup.create(name: "chest", description: "Pectoralis muscle is located anterior of the body. Allows for movement of the shoulder joint.")
 lower_back = MuscleGroup.create(name: "lower back", description: "Lower back muscle is located at the posterior of the body, right above the buttocks.")
-deltoids = MuscleGroup.create(name: "shoulders", description: "Deltoid muscle is located above the bicep and tricep. Allows for arm abduction along the frontal plane.(Lifting of the arm infront of you)")
+deltoids = MuscleGroup.create(name: "deltoids", description: "Deltoid muscle is located above the bicep and tricep. Allows for arm abduction along the frontal plane.(Lifting of the arm infront of you)")
 traps = MuscleGroup.create(name: "traps", description: "Trapezius muscle is located around your lower neck to your thoacic vertebrae (half way down your spine) to your shoulder blade. Allows for the support of your arm and move the shoulder blade.")
 lats = MuscleGroup.create(name: "lats", description: "Latissimus dorsi  muscle is a larger flat muscle posterior to the arm (right next to the arm) , partly covered by the traps.")
 middle_back = MuscleGroup.create(name: "middle back", description: "Rhomboid  muscle connects the shoulder blade with the spinal column. ")
@@ -218,6 +218,7 @@ biceps.workouts << curl
 forearms.workouts << curl
 
 traps.workouts << shrug
+deltoids.workouts << shrug
 
 #--
 quads.workouts <<  squat

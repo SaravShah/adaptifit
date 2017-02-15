@@ -2,7 +2,7 @@ class MuscleGroupController < ApplicationController
   def index
     @muscle_groups = MuscleGroup.all
     p "sdla;kfjas"*100
-    p params
+    p params[:ids]
 
   end
 
