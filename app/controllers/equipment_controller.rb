@@ -3,8 +3,13 @@ class EquipmentController < ApplicationController
     @equipments = Equipment.all
   end
   def create
-    p params[:eq_id]
+    @sma = params[:eq_id]
+    redirect_to :action => 'show'
   end
+  # def show
+  #   p "boo"*100
+  #   p @sma
+  # end
 
 
 
