@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170208015900) do
+ActiveRecord::Schema.define(version: 20170214214657) do
 
   create_table "equipment", force: :cascade do |t|
     t.string   "name"
@@ -40,6 +40,13 @@ ActiveRecord::Schema.define(version: 20170208015900) do
     t.datetime "created_at",      null: false
     t.datetime "updated_at",      null: false
     t.index ["workout_type_id"], name: "index_muscle_groups_on_workout_type_id"
+  end
+
+  create_table "users", force: :cascade do |t|
+    t.string   "email"
+    t.string   "password_hash"
+    t.datetime "created_at",    null: false
+    t.datetime "updated_at",    null: false
   end
 
   create_table "workout_types", force: :cascade do |t|
