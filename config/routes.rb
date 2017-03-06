@@ -1,10 +1,13 @@
 Rails.application.routes.draw do
-  resources :equipment, only: [:index, :create]
-  resources :user, only: [:new, :create, :show]
-  resources :workout_type, only: [:index, :create, :show]
-  resources :muscle_group, only: [:index, :show, :create]
-  resources :workout, only: [:index]
-
+  namespace :api, defaults:{format: :json} do
+    namespace :v1 do 
+      resources :equipment, only: [:index, :create]
+      resources :user, only: [:new, :create, :show]
+      resources :workout_type, only: [:index, :create, :show]
+      resources :muscle_group, only: [:index, :show, :create]
+      resources :workout, only: [:index]
+    end
+  end
   get "/home", to: "equipment#index"
 	root to: 'equipment#index'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html

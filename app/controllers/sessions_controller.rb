@@ -1,6 +1,5 @@
 class SessionsController < ApplicationController
 	include SessionsHelper
-
 	def login
 	end
 
