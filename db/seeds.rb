@@ -125,8 +125,7 @@ step_ups = Workout.create(name:"Step-Ups", description:'nil', gif:'nil')
 box_jumps = Workout.create(name:"Box Jumps ", description:'nil', gif:'nil')
 single_leg_lunges = Workout.create(name:"Single Leg Lunges", description:'nil', gif:'nil')
 dips = Workout.create(name:"Dips", description:'nil', gif:'nil')
-chest_press = Workout.create(name:"Chest Press", description:'nil', gif:'nil')
-
+chest_press = Workout.create(name:"Chest Press", description:'nil', gif:'nil') 
 side_raise = Workout.create(name:"side raise", description:"nil", gif:"nil")
 tricep_extension = Workout.create(name:"tricep extension", description:"nil", gif:"nil")
 
