@@ -1,24 +1,7 @@
 ALL EQUIPMENT WORKOUTS
 
-<% eq_list_arr = [] %>
-<% @equipment_list.each do |eq| %>
-	<% eq.workouts.each do |eqwk| %>
-		<% eq_list_arr << eqwk.name %>
-		<br>
-	<% end %>
-<% end %>
 
-
-<% @muscle_group_list.each do |mg| %>
-
-	<%mg.workouts.each do |mgwk| %>
-		<% if eq_list_arr.include?(mgwk.name) %>
-			<%= mgwk.name %>
-		<% else %>
-				
-		<% end %><br>
-	<% end %>
-<% end %>
-
-
-
+<% @view_list.each do |workout| %>
+	<%= workout %>
+	<br>
+<%end%>
