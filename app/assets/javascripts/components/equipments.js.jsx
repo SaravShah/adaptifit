@@ -1,19 +1,19 @@
-
 class Equipments extends React.Component {
 	constructor(props) {
 		super(props);
-		// this.state = {
-		// 	equipments: []
-		// }
-		this.equipments = props.data
+		equipments = props.data
 	}
 	render(){
 		return(
 			<div>
 				<h1> Equipments  </h1>
-				<ul> {this.equipments.map(function(equipment){
-            return <li>{equipment.name}</li>;
-          })} </ul>
+				<ul> {equipments.map(function(equipment){
+            		return <li key={equipment.id}>
+            		<a href={'/equipment/' + equipment.id} > {equipment.name}</a>
+            		</li>;
+          				})
+					} 	
+				</ul>
 				
 			</div>
   	)

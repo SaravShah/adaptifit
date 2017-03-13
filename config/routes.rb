@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-      resources :equipment, only: [:index, :create]
+      resources :equipment
       resources :user, only: [:new, :create, :show]
       resources :workout_type, only: [:index, :create, :show]
       resources :muscle_group, only: [:index, :show, :create]
