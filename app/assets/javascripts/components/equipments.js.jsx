@@ -1,50 +1,50 @@
 class Equipments extends React.Component {
 	constructor(props) {
 		super(props);
-		equipments = props.data
+		equipments = props.data;
+		this.state = { isChecked: false };	
 	}
+
+	onChange(){
+		this.setState({isChecked: !this.state.isChecked});
+	}
+	
+
+	
+
+	
+	
 	render(){
+		var label = this.state.isChecked ? console.log("TRUE") : console.log("FALSE");
+
 		return(
 			<div>
 				<h1> Equipments  </h1>
 				<ul> {equipments.map(function(equipment){
-            		return <li key={equipment.id}>
-            		<a href={'/equipment/' + equipment.id} > {equipment.name}</a>
-            		</li>;
-          				})
+					
+            		return <span key={equipment.id}>
+            		<form>
+						<label>
+            				<input 
+            				type="checkbox"
+            				checked={ this.state.isChecked }
+            				onChange={ this.onChange }
+            				/>
+            				<a href={'/equipment/' + equipment.id} > {equipment.name}</a>
+            				{label}
+            			</label>
+            		</form>
+            		</span>
+
+            	          				})
 					} 	
-				</ul>
-				
+				</ul>				
 			</div>
   	)
   }
 }
 
-// ------AUTOFILL CRAP------------------------------------------------
-// http://hackingbeauty.com/create-a-reactjs-component-part1/ //
-// import React, {Component} from 'react';
-// import { Autocomplete }   from 'material-ui';
 
-// class MaterialUIAutocomplete extends Component {
-//   constructor(props) {
-//     super(props);
-//     this.onUpdateInput = this.onUpdateInput.bind(this);
-//     this.state = {
-//       dataSource : [],
-//       inputValue : ''
-//     }
-//   }
 
-//   onUpdateInput(inputValue) {
-//   }
-
-//   render() {
-//     return <AutoComplete
-//             dataSource    = {this.state.dataSource}
-//             onUpdateInput = {this.onUpdateInput} />
-//   }
-// }
-
-// export default MaterialUIAutocomplete;
 
 
