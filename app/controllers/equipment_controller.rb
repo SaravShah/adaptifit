@@ -6,10 +6,11 @@ class EquipmentController < ApplicationController
     equipment_ids = params[:eq_id]
     redirect_to controller: 'muscle_group', action: 'index', eq_ids: equipment_ids
   end
-  # def show
-  #   p "boo"*100
-  #   p @sma
-  # end
+
+  def show  
+    id = params[:id].to_i
+    @equipment = Equipment.find(id)
+  end
 
 
 
