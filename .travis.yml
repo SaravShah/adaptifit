@@ -2,8 +2,10 @@ services:
 - postgresql
 before_script:
 - psql -c 'create database fit_test;' -U postgres
-- RAILS_ENV=test bundle exec rake db:migrate
-- RAILS_ENV=test bundle exec rake db:seed
+- bin/rails db:migrate RAILS_ENV=test
+- bin/rails db:migrate RAILS_ENV=test
+script:
+- bundle exec rake rspec
 
 language: ruby
 rvm:

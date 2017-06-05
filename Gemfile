@@ -31,6 +31,9 @@ gem 'hirb', '~> 0.7.0'
 gem 'bcrypt'
 gem 'responders'
 gem 'react-rails', '~> 1.0'
+gem 'rails-controller-testing'
+
+
 
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 3.0'
@@ -43,6 +46,8 @@ gem 'react-rails', '~> 1.0'
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platform: :mri
+  gem 'rspec-rails',      ">= 2.0.0.beta"
+
 end
 
 group :development do
